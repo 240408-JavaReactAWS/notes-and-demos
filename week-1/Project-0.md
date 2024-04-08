@@ -1,6 +1,6 @@
 # Paired Programming Project Summary and Requirements 
 
-## **DUE DATE: 4/8 @ 10 AM EST**
+## **DUE DATE: 4/12 @ 10 AM EST**
 
 ## Executive Summary
 
