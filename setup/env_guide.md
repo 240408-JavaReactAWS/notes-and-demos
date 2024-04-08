@@ -11,7 +11,7 @@ Please install the following technologies:
 - **PostgreSQL**
 - **DBeaver**
 - **Java SE Development Kit 11**
-- **IntelliJ IDEA Community Edition** - mandatory due to client request.
+- **IntelliJ IDEA Community Edition** 
 - **Apache Maven**
 - **Node.js**
 
