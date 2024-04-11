@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Intro</title>
+
+    <!-- CSS (Cascading Style Sheets) is used to stylize and make pretty our HTML pages.
+        Sometimes CSS can be a pain to deal with, so it is recommended to use other tools like Bootstrap, Skeleton, or something
+        like MaterialUI
+    
+    
+        There are 3 major kinds of CSS Styling and it's important to know the difference
+        
+        Inline CSS: CSS applied through the style attribute on an element directly
+        Internal CSS: CSS applied through a style tag in the HEAD tag of the document
+        External CSS: CSS applied through an external sheet containing the CSS itself (this will get linked to the HTML page)
+
+        We'll see this in action but it's important to note the cascading nature of CSS, the styling that is closest to the element
+        itself takes priority (aka, Inline has highest priority, then Internal, then External) and the one with the highest
+        priority will override the others (barring some special conditions)
+    
+    -->
+
+    <style>
+        /* Inside of the Style Tag we write CSS that will apply to this entire sheet. Looking inside of here we can see that
+        this is just CSS, even the commenting style is different*/
+
+        /* ID Selector -> Used to grab a unique element from across the page with a specific ID */
+        #my-special-div{
+            border: 2px black dashed;
+            color: green
+        }
+
+        /* Class Selector -> Used to grab all elements with a specified class */
+
+        .div-class{
+            background-color: aquamarine;
+            border: 5px slateblue solid;
+        }
+
+        /* Tag Selector -> Used to grab all elements of a specific tag type no matter where they are*/
+        span{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+
+    <!-- External Style Sheets are linked to this page by using a link tag -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>CSS Rules are defined in key-value pairs that can be applied in different locations</h1>
+    <p style="color: goldenrod; background-color: black;">This is an example of some inline styling</p>
+
+    <!-- One thing to note is that the black goes across the entire page, this is because a p tag is a BLOCK element, span
+        is an alternative to p that is an inline element -->
+
+    <span style="color:red; background-color: aquamarine;">This is an inline element, where p is a block element</span>
+
+
+    <!-- Internal styling example -->
+
+    <div>
+        <h2> Selectors </h2>
+        <h3> Element, Class and Id Selectors</h3>
+
+        <div id="my-special-div">
+            <p>This div has a unique identifier called an id</p>
+            <p>Second child element</p>
+        </div>
+
+        <div>
+            <p>This div is in a class of its own</p>
+            <span> A Second Span Tag!</span>
+        </div>
+
+        <div class="div-class">
+            <p> This div shares the class with the div below</p>
+        </div>
+
+        <div class="div-class">
+            <p> This div shares the class with the div above</p>
+        </div>
+    </div>
+
+    <p id="my-special-paragraph"> This Paragraph was styled externally!</p>
+    
+</body>
+</html>

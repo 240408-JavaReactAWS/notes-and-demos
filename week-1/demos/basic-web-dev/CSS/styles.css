@@ -1,0 +1,8 @@
+/* This is an external style sheet, it allows us to write css code and reuse it in multiple different files without worry
+of overlapping */
+
+#my-special-paragraph {
+    border: 2px black solid;
+    padding: 10px;
+    margin: 100px;
+}
