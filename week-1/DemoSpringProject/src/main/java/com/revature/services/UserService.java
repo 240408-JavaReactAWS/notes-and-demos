@@ -1,5 +1,6 @@
 package com.revature.services;
 
+import com.revature.exceptions.UserNotFoundException;
 import com.revature.models.User;
 import com.revature.repos.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,9 @@ public class UserService {
         // This method should pass the id to the dao layer to search for the user
         // Possible validation we could do here: check that id > 0, make sure the user is present etc.
 
-        return ud.findById(id).get();// There are other methods we can use that will return an Optional for better
+        return ud.findById(id).orElseThrow(() -> new UserNotFoundException("No User found with id: " + id));
+
+        // There are other methods we can use that will return an Optional for better
         // null-checking but we'll skip that for now
     }
 
