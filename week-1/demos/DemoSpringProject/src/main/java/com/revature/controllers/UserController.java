@@ -16,6 +16,7 @@ import static org.springframework.http.HttpStatus.OK;
 
 @RestController
 @RequestMapping("/users") // Controls where the requests are being sent to -> http://localhost:8080/users
+@CrossOrigin(origins = {"http://localhost:5500", "http://127.0.0.1:5500"})
 public class UserController {
 
     private UserService us;

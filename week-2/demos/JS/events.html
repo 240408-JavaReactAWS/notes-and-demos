@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <!-- In Web Dev, we use events to mark interactions with the webpage and there are various ways to do so
+
+        Click
+        DblClick
+        MouseOver
+        KeyDown
+        etc
+    
+        All of these are different things we can listen for in JS-->
+
+        <h1>Register A New User: </h1>
+
+        <!-- We haven't talked to much about taking in user input but the easiest way is to use an input tag -->
+        <label for="usernameInput">Enter Username: </label>
+        <input id="usernameInput" type="text" placeholder="Username" onmouseover="usernameMouseOver()">
+
+        <label for="passwordInput">Enter Password: </label>
+        <input id="passwordInput" type="password" maxlength="50">
+
+        <button id="createUserButton"> Create New User! </button>
+
+        <script src="./events.js"></script>
+
+
+    
+</body>
+</html>

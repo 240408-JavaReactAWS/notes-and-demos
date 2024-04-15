@@ -1,0 +1,21 @@
+/* Recall when we do CSS we can select elements in a variaty of ways (id, element tag, or class name) so let's do that */
+
+.user{
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    margin: 20px;
+}
+/* I'm kinda freestyling with the styling here, tools like Bootstrap can do a lot of the heavy lifting for you, but you can always play around with
+CSS yourself */
+
+#UserContainer{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:center;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+}
