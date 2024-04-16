@@ -154,3 +154,13 @@ let p2: Person = {
     lastName: 'Doe',
     isMarried: false
 }
+
+// NEVER Data Type
+// This is generally something that you won't use very often but it used to specify when a function will never return a value
+// Think of a method that only ever throws an exception
+
+function neverFunction(): never {
+    throw new DOMException();
+}
+
+// Not the most useful but there are certain scenarios where it exists so it has a data type
