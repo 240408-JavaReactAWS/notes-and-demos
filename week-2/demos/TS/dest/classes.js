@@ -2,6 +2,7 @@
 // Since we're in TS and TS is an OOP language it makes sense that we can define classes and use them
 // NOTE: Classes also exist in JS but it's multi-paradigmed and we don't typically focus on creating too many classes in JS
 class Animal {
+    // This will acts as constant and cannot be changed
     // Constructor
     constructor(name, species) {
         this.name = name;
@@ -19,6 +20,7 @@ class Animal {
         console.log(`${this.name} moved a total of ${feet} feet`);
     }
 }
+Animal.constantVar = 3;
 // So now that we've defined a class we can create objects of that type
 let perry = new Animal("Perry", "Platypus");
 // We use the new keyword to create an instance of a class
@@ -27,6 +29,8 @@ console.log(perry.name);
 console.log(perry.getSpecies);
 perry.move(5);
 // perry.name = "Not perry";
+console.log(Animal.constantVar);
+// The above is a static variable
 // Other OOP Properties
 // Inheritance
 // We can inherit from other classes

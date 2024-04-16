@@ -8,6 +8,9 @@ class Animal{
     // There are access modifiers as well
     private species: string;
 
+    static constantVar = 3;
+    // This will acts as constant and cannot be changed
+
     // Constructor
     constructor(name: string, species: string){
         this.name = name;
@@ -40,6 +43,9 @@ console.log(perry.getSpecies);
 perry.move(5);
 
 // perry.name = "Not perry";
+
+console.log(Animal.constantVar)
+// The above is a static variable
 
 // Other OOP Properties
 // Inheritance
