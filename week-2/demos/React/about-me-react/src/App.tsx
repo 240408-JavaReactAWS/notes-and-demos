@@ -4,6 +4,9 @@ import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
+import TTAAL from './components/ttaal/TTAAL';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Nav from './components/nav/Nav';
 
 function App() {
 
@@ -20,7 +23,40 @@ function App() {
     {/* // <h1>Hello World!</h1>} */}
       <Header></Header>
     {/* // NOTE: basic html elements are all lowercase, React Components start with Uppercase} */}
-      <Home></Home>
+
+
+
+      {/* <Home></Home> */}
+      {/* <TTAAL></TTAAL> */}
+
+
+      {/* I only want to show the Home component OR the TTAAL component but I don't want to have to comment one out back and forth
+        SOLUTION: ROUTING
+        
+        Routing creates different routes for your application
+        / -> Home component
+        /ttaal -> TTAAL component
+
+        WOAH I thought we were making SPAs, how come there are multiple pages? There aren't actually multiple pages, it just
+        gives the illusion of multiple page while it just changes what components are rendered
+
+        React being a somewhat lightweight library it doesn't include a in-the-box solution for routing, we'll need to add one in
+        We add in the React Router DOM by doing 'npm install react-router-dom' and it gives us the ability to navigate between pages
+
+        Curly braces allow us to directly inject JS into our rendered model
+        */}
+        
+        <BrowserRouter>
+          <Nav></Nav> 
+          <Routes>
+            <Route path='/' element={<Home></Home>}></Route>
+            <Route path='/ttaal' element={<TTAAL></TTAAL>}></Route>
+          </Routes>
+        </BrowserRouter>
+
+
+
+
       <Footer></Footer>
     {/*
     Why is react mad? We did everything the same as before?
