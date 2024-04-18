@@ -89,12 +89,16 @@ function PlanContainer() {
             {
                 plans.map( (plan) =>{
 
-                    return (<Plan 
-                        plan={plan} 
-                        plans={plans}
-                        setPlans={setPlans}
-                        key={"plan-"+plan.planId}
-                        ></Plan>)
+                    if(plan.owner.userId === 1){
+                        return (<Plan 
+                            plan={plan} 
+                            plans={plans}
+                            setPlans={setPlans}
+                            key={"plan-"+plan.planId}
+                            ></Plan>)
+                    }
+
+                    
                 })
             }
 
