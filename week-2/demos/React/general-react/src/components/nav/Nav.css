@@ -1,0 +1,33 @@
+nav{
+    /* background-color: blueviolet; */
+  
+    border-bottom: 2px solid black;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+nav ul li{
+    float: left;
+}
+  
+nav ul li:last-child{
+    float: right;
+}
+  
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+  
+nav ul li a:hover {
+    background-color: #111;
+}
