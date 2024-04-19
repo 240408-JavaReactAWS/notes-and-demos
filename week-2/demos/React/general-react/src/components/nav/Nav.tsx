@@ -10,7 +10,7 @@ function Nav() {
                 <li><Link to="context">UseContext</Link></li>
                 <li><Link to="events">Events</Link></li>
                 <li><Link to="login">Login with axios/fetch</Link></li>
-                <li><Link to="admin">Admin Page</Link></li>
+                <li><Link to="dashboard">User Dashboard</Link></li>
             </ul>
         </nav>
   )

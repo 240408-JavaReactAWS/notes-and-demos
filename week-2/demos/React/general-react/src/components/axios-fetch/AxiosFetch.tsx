@@ -1,5 +1,6 @@
 import React, { SyntheticEvent, useState } from 'react'
 import './AxiosFetch.css'
+import axios from 'axios';
 
 export interface IUser {
     userId: number,
@@ -49,6 +50,21 @@ function AxiosFetch() {
 
     }
 
+    let loginWithAxios = async() => {
+        let res = await axios.post('http://localhost:8080/users/login', {username, password})
+                        .then((response) => {
+                            localStorage.setItem("username", response.data.username)
+                            return response.data}
+                        )
+                        .catch( (error) => {
+                            localStorage.removeItem("username")
+                            console.error(error)
+                        });
+
+       
+        setCurrentUser(res)
+    }
+
 
   return (
     <div className='loginForm'>
@@ -58,6 +74,8 @@ function AxiosFetch() {
         <label>Password: <input id='password-input' type='password' onChange={updatePassword}></input></label>
 
         <button onClick={loginWithFetch}>Login with fetch!</button>
+
+        <button onClick={loginWithAxios}>Login with Axios!</button>
 
         <h3>Logged in User: {currentUser?.username}</h3>
       

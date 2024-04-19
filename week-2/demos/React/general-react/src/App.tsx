@@ -8,6 +8,7 @@ import ContextProvider from './components/context/ContextProvider';
 import { createContext } from 'react';
 import Events from './components/events/Events';
 import AxiosFetch from './components/axios-fetch/AxiosFetch';
+import UserDashboard from './components/UserDashboard/UserDashboard';
 
 export const hiddenValueContext = createContext(42)
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/context' element={<ContextProvider/>}></Route>
           <Route path='/events' element={<Events />}></Route>
           <Route path='/login' element={<AxiosFetch />}></Route>
+          <Route path='/dashboard' element={<UserDashboard />}></Route>
         </Routes>
       </BrowserRouter>
       </hiddenValueContext.Provider>
