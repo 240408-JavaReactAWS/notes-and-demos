@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './GreatGrandChild.css'
+import { globalState } from '../../../globalStore'
+import { hiddenValueContext } from '../../../App'
 
 interface IGreatGrandChildProps{
     nameValue: string,
@@ -12,11 +14,17 @@ To get the props down here we had to perform something called prop drilling (pas
 */
 
 function GreatGrandChild(props: IGreatGrandChildProps) {
+
+  const hiddenValueReference = useContext(hiddenValueContext)
+
+
   return (
     <div className='greatgrandchild'>
       <h4>Hello from the great grand child</h4>
       <h4>I care about the name value, how do I get it?</h4>
       <h4>I now know the name, it is {props.nameValue}</h4>
+      <h4>Let's pull the name from the global state: {globalState.globalNameValue}</h4>
+      <h4>The hidden value is {hiddenValueReference}</h4>
     </div>
   )
 }

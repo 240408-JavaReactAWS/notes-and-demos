@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Parent.css'
 import Child from '../Child/Child'
+import { globalState } from '../../../globalStore';
 
 function Parent() {
 
@@ -17,6 +18,8 @@ function Parent() {
   // If I want to update the name we'll use the setNameValue function
   let toggleName = () =>{
     setNameValue(nameValue === "Bryan" ? "John" : "Bryan")
+
+    globalState.globalNameValue = globalState.globalNameValue === "Bryan" ? "Jon": "Bryan"
     /*
     if (nameValue === Bryan){
       return John
