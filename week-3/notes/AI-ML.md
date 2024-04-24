@@ -12,7 +12,7 @@ Our initial thoughts:
         - general AI: multipurpose
         - Where does chatgpt fall?
         - Where do art-based AI come in? Specifically the ones that generate new art like DALL-E
-            - **PAUSE ON THIS TILL TOMORROW**
+            
 
 - What is Machine Learning?
     - learning -> taking what is known and known concepts and applying them to new concepts
@@ -21,9 +21,9 @@ Our initial thoughts:
 
 
 - What is an LLM?
-    - Preventing hallucinations
-
+    
 - What is prompt engineering
+    - Preventing hallucinations
 
 - What is computer vision?
 - What is Natural Language Processing?
@@ -54,7 +54,9 @@ Artificial intelligence, or AI, is technology that enables computers and machine
 
 ChatGPT, as impressive as it is, belongs to a category of AI known as Narrow AI. Narrow AI systems, like ChatGPT, excel at specific tasks but lack a deep understanding of content or context. They can generate relevant responses through probabilistic but cannot reason about the world in the way humans do. AGI, on the other hand, would possess the ability to understand, analyze, and reason about a wide range of problems, demonstrating a level of intelligence akin to human beings.
 
-- GenAI falls into a subset of Narrow AI but this is something we'll explore more later
+### Generative AI (Gen AI)
+
+Generative artificial intelligence (AI) describes algorithms (such as ChatGPT) that can be used to create new content, including audio, code, images, text, simulations, and videos. Using these we can produce code, text, any sort of content more quickly and easily. Gen AI uses thousands or millions of examples on unlabelled data that it learns patterns from to produce new content based off that original content
 
 
 ## Machine Learning 
@@ -105,3 +107,66 @@ Machine learning (ML) is a branch of artificial intelligence (AI) and computer s
 
 - Random forests: In a random forest, the machine learning algorithm predicts a value or category by combining the results from a number of decision trees.
 
+
+## LLM (Large Language Models)
+A large language model (LLM) is a type of artificial intelligence (AI) program that can recognize and generate text, among other tasks. LLMs are trained on huge sets of data — hence the name "large." LLMs are built on machine learning: specifically, a type of neural network called a transformer model.
+
+In simpler terms, an LLM is a computer program that has been fed enough examples to be able to recognize and interpret human language or other types of complex data. Many LLMs are trained on data that has been gathered from the Internet — thousands or millions of gigabytes' worth of text. But the quality of the samples impacts how well LLMs will learn natural language, so an LLM's programmers may use a more curated data set.
+
+LLMs are then further trained via tuning: they are fine-tuned or prompt-tuned to the particular task that the programmer wants them to do, such as interpreting questions and generating responses, or translating text from one language to another.
+
+Chat-GPT is one example of an LLM that can be used for a variety of purposes
+
+LLMs are built upon transformer model Neural Networks that allow them to take in a sequence of data (like a sentence) and use the position and value of each word in the sentence to get the general contextual meaning of the sentence itself. It then becomes able to predict the next most possible word or phrase that may follow and uses this to generate a new response in human-readable language
+
+## Prompt Engineering
+
+Generative artificial intelligence (AI) systems are designed to generate specific outputs based on the quality of provided prompts. Prompt engineering helps generative AI models better comprehend and respond to a wide range of queries, from the simple to the highly technical.
+
+### Prompt Engineering Use-Cases
+- Chatbots
+- Healthcare
+- Software Development
+- Software Engineering
+- Cybersecurity and Computer Science
+
+### How do we Prompt Engineer?
+
+- Providing a persona
+    - The concept of Persona in software development refers to the creation of fictitious user profiles that represent the different types of users who might use the software.
+    - "Act as a HR Representative for our company, your goal is to handle HR related requests and give appropriate responses on what to do via company policy. Do not answer any non-related questions about topics other than HR"
+
+- n-Shot prompting
+    - Zero-Shot Prompting
+        - Typical, generic prompting. You provide a statement or a query on what you want the LLM to do and from there it does its best to produce what you want even if it has never seen it before
+
+    - Few-Shot Prompting
+        - Providing examples in your prompt. LLMs are trained on extraodinarily large datasets and do not need to be retrained but can be focused by providing a small number of examples (this is similar to how you can provide some simple company documents to an LLM and it can become a representative of those rules). By providing these examples you can have the LLM perform taks that you could not specifically articulate or have the llm perform tasks it was struggling with previously.
+
+### Preventing Hallucinations
+
+An LLM hallucination occurs when a large language model (LLM) generates a response that is either factually incorrect, nonsensical, or disconnected from the input prompt. Hallucinations are a byproduct of the probabilistic nature of language models, which generate responses based on patterns learned from vast datasets rather than factual understanding.
+
+- Causes:
+    - Vague or overly broad prompts
+    - Insufficient Domain Knowledge
+    - Limited training data
+    - Uncertainty in language
+
+- Solutions:
+    - Provide richer context. 
+    - Apply domain adaptation. 
+
+    - RAG it. RAG is a technique that augments the prompt with additional information that is passed to the LLM, often by accessing a vector database of text or code. This allows the context window tobe augmented by near real time data so the model tends to hallucinate less. Additionally, Extensions allow the model to access and retrieve relevant information from a database or API then apssing the additional context, in addition to the prompt, to the model.
+
+    - Use reasoning and iterative querying. 
+    
+    - Increase the specificity and clarity of your prompts. 
+
+    - Use examples; few-shot , in-context learning. 
+
+    - Break down complex tasks into simpler steps. 
+
+    - Chain-of-thought: CoT It. Ask the model to explain the steps it took to arrive at the answer, this will allow you to evaluate the micro steps it took to arrive at the completion.
+
+    - Diversify the information sources used for factual grounding.
