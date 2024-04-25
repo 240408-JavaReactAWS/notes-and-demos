@@ -1,37 +1,4 @@
 # Artificial Intelligence and Machine Learning
-
-Our initial thoughts:
-
-### Questions
-
-- What is Artificial Intelligence?
-    - intelligence -> ability to process patterns and solve problems
-        - artificial intelligence -> That process done via code/ non-living entity
-    - two schools of thought: focused and general AI
-        - focused AI: specific purpose (like video game AI, business centric chatbot)
-        - general AI: multipurpose
-        - Where does chatgpt fall?
-        - Where do art-based AI come in? Specifically the ones that generate new art like DALL-E
-            
-
-- What is Machine Learning?
-    - learning -> taking what is known and known concepts and applying them to new concepts
-        - Machine learning -> create new information from an existing dataset
-    - Using ai to solve problems systematically programmatically *at scale*
-
-
-- What is an LLM?
-    
-- What is prompt engineering
-    - Preventing hallucinations
-
-- What is computer vision?
-- What is Natural Language Processing?
-
-- What is GenAI?
-- What is AI Tooling? How can I use it?
-- What is GitHub copilot?
-
 ## Artificial Intelligence
 
 Artificial intelligence, or AI, is technology that enables computers and machines to simulate human intelligence and problem-solving capabilities.
