@@ -5,6 +5,7 @@ This is a new competency for us and with the curriculum being somewhat vague in 
 ## Questions
 
 - What is Artificial Intelligence?
+    - What is Weak vs Strong AI?
 
 - What is Machine Learning?
 
