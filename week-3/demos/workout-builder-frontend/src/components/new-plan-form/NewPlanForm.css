@@ -1,0 +1,32 @@
+h3 {
+    color: slateblue;
+}
+
+
+
+.all-exercises{
+    width: 40%;
+    text-align: center;
+    float: left;
+    
+}
+
+.new-plan{
+    width: 40%;
+    text-align: center;
+    float: right;
+}
+
+.new-plan-form-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    padding-top: 80px; /* Adjust this value based on the height of your navbar */
+    
+}
+
+.new-plan-form-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}

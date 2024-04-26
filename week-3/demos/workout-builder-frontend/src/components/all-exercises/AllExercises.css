@@ -1,0 +1,33 @@
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    padding-top: 80px; /* Adjust this value based on the height of your navbar */
+}
+
+.all-exercises-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.exercises-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.exercise-filter {
+    margin-bottom: 20px;
+}
+
+
+
+.exercise-icon {
+    margin: 10px;
+}

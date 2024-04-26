@@ -1,0 +1,28 @@
+.new-exercise-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    padding-top: 80px; /* Adjust this value based on the height of your navbar */
+}
+
+.new-exercise-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.new-exercise-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-exercise-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
