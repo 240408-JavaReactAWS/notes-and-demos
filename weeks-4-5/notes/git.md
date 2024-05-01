@@ -107,7 +107,3 @@ When you are ready to combine the changes from the feature branch to your main b
 Git cheat sheet:
 
 https://training.github.com/downloads/github-git-cheat-sheet.pdf
-
-# We're going to try to force a merge conflict real quick
-Let's see if the unreachable object thing is gone
-This change should only be visible on the new feature branch
