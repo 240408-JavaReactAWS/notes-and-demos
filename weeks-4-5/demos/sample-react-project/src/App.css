@@ -1,0 +1,45 @@
+body {
+  background-image: url(../public/pokemon.jpg);
+  background-size: cover;
+}
+
+.home-page{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.home-container{
+  max-width: 2000rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.poke-button{
+  background: #00a1e4; 
+  margin-left: auto;
+  margin-right:auto;
+  border-color: #02040F;
+  border-radius: 25px;
+  padding: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  border-radius: 25px;
+}
+
+.pokemon-pic{
+  width:150px;
+}
+
+.pokemon-container{
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
