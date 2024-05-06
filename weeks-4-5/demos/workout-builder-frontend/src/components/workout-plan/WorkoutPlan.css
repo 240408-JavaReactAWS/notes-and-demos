@@ -1,0 +1,19 @@
+.workout-plan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    padding-top: 80px; /* Adjust this value based on the height of your navbar */
+}
+
+.workout-plan-container h1 {
+    margin-bottom: 20px;
+}
+
+.workout-plan-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}

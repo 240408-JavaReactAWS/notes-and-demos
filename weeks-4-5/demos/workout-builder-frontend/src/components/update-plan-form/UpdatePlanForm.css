@@ -1,0 +1,27 @@
+h3 {
+    color: slateblue;
+}
+
+.parent{
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+}
+
+.all-exercises{
+    width: 40%;
+    text-align: center;
+    float: left;
+    
+}
+
+.new-plan{
+    width: 40%;
+    text-align: center;
+    float: right;
+}
+
+.true-parent {
+    align-items: center;
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.login-title {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.login-label {
+    margin: 10px 0;
+}
+
+.login-input {
+    margin-left: 10px;
+}
+
+.login-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    margin-top: 20px;
+}

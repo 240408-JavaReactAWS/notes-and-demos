@@ -1,0 +1,10 @@
+.workout-plan-icon{
+    width: 250px;
+    height: 100px;
+    margin-right: 10px;
+    /* black solid border with curved edges */
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+}
