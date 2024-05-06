@@ -33,11 +33,12 @@ function Login() {
                 username: username,
                 password: password
             }, {
-                withCredentials: true
+                withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
             });
             // Handle successful login
             console.log(res);
             if (res.status === 200) {
+                localStorage.setItem('username', username);
                 navigate('/plans');
             }
 

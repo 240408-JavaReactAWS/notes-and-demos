@@ -24,7 +24,9 @@ function NewPlanForm() {
     // fetch all exercises
     let fetchAllExercises = async () => {
         try {
-            let res = await axios.get('http://localhost:8080/exercises', { withCredentials: true });
+            let res = await axios.get('http://localhost:8080/exercises', { 
+                withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
+            });
             setAllExercises(res.data.sort((a: IExercise, b: IExercise) => {
                 return a.name.localeCompare(b.name)
             }));
@@ -35,7 +37,8 @@ function NewPlanForm() {
 
     useEffect(() => {
         let asyncCall = async () => {
-            let isValidSession = await commonFunctions.validateSession();
+            // let isValidSession = await commonFunctions.validateSession();
+            let isValidSession = (!!localStorage.getItem('username'))
             if (!isValidSession) {
                 navigate('/login');
             } else {
@@ -58,7 +61,9 @@ function NewPlanForm() {
 
         // axios request to create a new plan
         try {
-            let res = await axios.post('http://localhost:8080/plans', newPlan, { withCredentials: true });
+            let res = await axios.post('http://localhost:8080/plans', newPlan, { 
+                withCredentials: true , headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
+            });
             if (res.status === 201) {
                 console.log("Plan created successfully");
                 navigate('/plans')

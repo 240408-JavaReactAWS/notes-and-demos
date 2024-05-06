@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("users")
 @CrossOrigin(origins = {"http://localhost:3000"},
         methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE},
+        allowedHeaders = {"username", "Content-Type"},
         allowCredentials = "true")
 public class UserController {
 
@@ -27,12 +28,12 @@ public class UserController {
     }
 
     @PostMapping("register")
-    public ResponseEntity<User> registerNewUserHandler(@RequestBody User user, HttpSession session){
+    public ResponseEntity<User> registerNewUserHandler(@RequestBody User user){
         User savedUser;
 
         try{
             savedUser = us.createUser(user.getUsername(), user.getPassword());
-            session.setAttribute("user", savedUser); // Store the user in the session
+//            session.setAttribute("user", savedUser); // Store the user in the session
         } catch (UsernameAlreadyTakenException e){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 
@@ -42,12 +43,12 @@ public class UserController {
     }
 
     @PostMapping("login")
-    public ResponseEntity<User> loginNewUserHandler(@RequestBody User user, HttpSession session){
+    public ResponseEntity<User> loginNewUserHandler(@RequestBody User user){
         User loggedInUser;
 
         try{
             loggedInUser = us.logInUser(user.getUsername(), user.getPassword());
-            session.setAttribute("user", loggedInUser); // Store the user in the session
+//            session.setAttribute("user", loggedInUser); // Store the user in the session
         } catch (InvalidCredentialsException | NoSuchUserException e){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
@@ -66,8 +67,8 @@ public class UserController {
     }
 
     @GetMapping("admin")
-    public ResponseEntity<User> validateAdmin(HttpSession session){
-        User user = (User) session.getAttribute("user");
+    public ResponseEntity<User> validateAdmin(@RequestHeader(name="username") String username){
+        User user = us.getUserByUsername(username);
         if (user == null){
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         } else if (user.getRole() != Role.ADMIN) {

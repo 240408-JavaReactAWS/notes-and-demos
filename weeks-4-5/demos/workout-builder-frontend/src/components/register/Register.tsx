@@ -28,12 +28,13 @@ function Register() {
               username: username,
               password: password
           }, {
-              withCredentials: true
+              withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
           });
           // Handle successful register
           console.log(res);
           if (res.status === 201) {
-              navigate('/plans');
+            localStorage.setItem('username', username);
+            navigate('/plans');
           }
 
       } catch (error: any) {

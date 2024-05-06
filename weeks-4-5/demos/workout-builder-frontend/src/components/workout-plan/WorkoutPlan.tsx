@@ -18,7 +18,9 @@ function WorkoutPlan() {
     useEffect(() => {
         let asyncFunc = async () => {
             try {
-                let response = await axios.get(`http://localhost:8080/plans/${id}`, { withCredentials: true });
+                let response = await axios.get(`http://localhost:8080/plans/${id}`, { 
+                    withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
+                 });
                 console.log(response.data);
                 setWorkoutPlan(response.data);
             } catch (error: any) {
@@ -39,7 +41,9 @@ function WorkoutPlan() {
     // function to delete plan
     let deletePlan = async () => {
         try {
-            let response = await axios.delete(`http://localhost:8080/plans/${id}`, { withCredentials: true });
+            let response = await axios.delete(`http://localhost:8080/plans/${id}`, { 
+                withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
+             });
             if (response.status === 200) {
                 console.log("Plan deleted");
                 navigate('/plans');

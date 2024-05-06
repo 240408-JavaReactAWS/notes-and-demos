@@ -16,7 +16,9 @@ function UpdatePlanForm() {
 
     const getCurrentPlan = async () => {
         try {
-            const res = await axios.get(`http://localhost:8080/plans/${id}`, { withCredentials: true });
+            const res = await axios.get(`http://localhost:8080/plans/${id}`, { 
+                withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
+            });
             const currentPlan: IPlan = res.data;
             setFormName(currentPlan.name);
             setAddedExercises(currentPlan.exercises);
@@ -37,7 +39,9 @@ function UpdatePlanForm() {
 
     const fetchAllExercises = async () => {
         try {
-            const res = await axios.get('http://localhost:8080/exercises', { withCredentials: true });
+            const res = await axios.get('http://localhost:8080/exercises', { 
+                withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
+             });
             const allExercises: IExercise[] = res.data;
             // console.log(allExercises);
             // console.log(addedExercises);
@@ -58,7 +62,8 @@ function UpdatePlanForm() {
 
     useEffect(() => {
         let asyncCall = async () => {
-            let isValidSession = await commonFunctions.validateSession();
+            // let isValidSession = await commonFunctions.validateSession();
+            let isValidSession = (!!localStorage.getItem('username'))
             if (!isValidSession) {
                 navigate('/login');
             } 
@@ -88,7 +93,9 @@ function UpdatePlanForm() {
 
         // axios request to create a new plan
         try {
-            let res = await axios.put('http://localhost:8080/plans', newPlan, { withCredentials: true });
+            let res = await axios.put('http://localhost:8080/plans', newPlan, { 
+                withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
+             });
             if (res.status === 200) {
                 console.log("Plan updated successfully");
                 navigate('/plans')

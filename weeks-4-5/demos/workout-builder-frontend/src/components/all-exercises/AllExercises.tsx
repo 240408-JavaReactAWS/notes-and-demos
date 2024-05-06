@@ -17,7 +17,7 @@ function AllExercises() {
         let asyncCall = async () => {
             try {
                 let res = await axios.get('http://localhost:8080/users/admin', {
-                    withCredentials: true
+                    withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
                 });
                 // console.log(res);
             } catch (error : any) {
@@ -34,7 +34,7 @@ function AllExercises() {
 
             try {
                 let res = await axios.get('http://localhost:8080/exercises', {
-                    withCredentials: true
+                    withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
                 });
                 // console.log(res.data);
                 setExercises(res.data.sort((a: IExercise, b: IExercise) => {
@@ -52,7 +52,7 @@ function AllExercises() {
         setFilter(e.target.value);
         try {
             let res = await axios.get(`http://localhost:8080/exercises`, {
-                withCredentials: true
+                withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
             });
             let filteredExercises = res.data.filter((exercise: IExercise) => {
                 return exercise.bodyGroup === e.target.value || e.target.value === 'all';
@@ -69,7 +69,7 @@ function AllExercises() {
     let refreshExercises = async () => {
         try {
             let res = await axios.get('http://localhost:8080/exercises', {
-                withCredentials: true
+                withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
             });
             let filteredExercises = res.data.filter((exercise: IExercise) => {
                 return exercise.bodyGroup === filter || filter === 'all';

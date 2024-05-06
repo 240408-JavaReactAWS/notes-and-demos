@@ -51,4 +51,10 @@ public class UserService {
             throw new InvalidCredentialsException("Password was incorrect!");
         }
     }
+
+    public User getUserByUsername(String username) {
+        Optional<User> possibleUser = ud.findUserByUsername(username);
+
+        return possibleUser.orElse(null);
+    }
 }

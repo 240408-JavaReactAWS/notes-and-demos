@@ -14,7 +14,7 @@ function NewExerciseForm() {
         let asyncCall = async () => {
             try {
                 let res = await axios.get('http://localhost:8080/users/admin', {
-                    withCredentials: true
+                    withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
                 });
                 // console.log(res);
             } catch (error : any) {
@@ -49,7 +49,7 @@ function NewExerciseForm() {
                 name: exerciseName,
                 bodyGroup: bodyGroup
             }, {
-                withCredentials: true
+                withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
             });
             if (res.status === 201) {
                 navigate('/exercises');
