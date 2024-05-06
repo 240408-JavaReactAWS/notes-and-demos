@@ -16,7 +16,7 @@ function AllExercises() {
     useEffect(() => {
         let asyncCall = async () => {
             try {
-                let res = await axios.get('http://localhost:8080/users/admin', {
+                let res = await axios.get('http://ec2-54-221-99-230.compute-1.amazonaws.com/users/admin', {
                     withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
                 });
                 // console.log(res);
@@ -33,7 +33,7 @@ function AllExercises() {
 
 
             try {
-                let res = await axios.get('http://localhost:8080/exercises', {
+                let res = await axios.get('http://ec2-54-221-99-230.compute-1.amazonaws.com/exercises', {
                     withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
                 });
                 // console.log(res.data);
@@ -51,7 +51,7 @@ function AllExercises() {
     let filterExercises = async (e: React.ChangeEvent<HTMLSelectElement>) => {
         setFilter(e.target.value);
         try {
-            let res = await axios.get(`http://localhost:8080/exercises`, {
+            let res = await axios.get(`http://ec2-54-221-99-230.compute-1.amazonaws.com/exercises`, {
                 withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
             });
             let filteredExercises = res.data.filter((exercise: IExercise) => {
@@ -68,7 +68,7 @@ function AllExercises() {
 
     let refreshExercises = async () => {
         try {
-            let res = await axios.get('http://localhost:8080/exercises', {
+            let res = await axios.get('http://ec2-54-221-99-230.compute-1.amazonaws.com/exercises', {
                 withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
             });
             let filteredExercises = res.data.filter((exercise: IExercise) => {

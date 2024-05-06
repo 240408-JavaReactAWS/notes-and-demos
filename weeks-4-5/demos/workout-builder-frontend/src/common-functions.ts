@@ -3,7 +3,7 @@ import axios from "axios";
 export const commonFunctions = {
     validateSession: async () => {
         try {
-            let res = await axios.get('http://localhost:8080/users/session', {
+            let res = await axios.get('http://ec2-54-221-99-230.compute-1.amazonaws.com/users/session', {
                 withCredentials: true
             });
             console.log(res);

@@ -24,7 +24,7 @@ function NewPlanForm() {
     // fetch all exercises
     let fetchAllExercises = async () => {
         try {
-            let res = await axios.get('http://localhost:8080/exercises', { 
+            let res = await axios.get('http://ec2-54-221-99-230.compute-1.amazonaws.com/exercises', { 
                 withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
             });
             setAllExercises(res.data.sort((a: IExercise, b: IExercise) => {
@@ -61,7 +61,7 @@ function NewPlanForm() {
 
         // axios request to create a new plan
         try {
-            let res = await axios.post('http://localhost:8080/plans', newPlan, { 
+            let res = await axios.post('http://ec2-54-221-99-230.compute-1.amazonaws.com/plans', newPlan, { 
                 withCredentials: true , headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
             });
             if (res.status === 201) {

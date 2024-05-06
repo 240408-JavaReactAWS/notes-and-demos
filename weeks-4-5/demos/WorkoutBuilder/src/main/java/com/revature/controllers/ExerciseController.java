@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("exercises")
-@CrossOrigin(origins = {"http://localhost:3000"},
+@CrossOrigin(origins = {"http://localhost:3000", "http://workout-builder-240408.s3-website-us-east-1.amazonaws.com"},
         methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE},
         allowedHeaders = {"username", "Content-Type"},
         allowCredentials = "true")

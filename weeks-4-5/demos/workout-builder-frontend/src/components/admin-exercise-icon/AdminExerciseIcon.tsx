@@ -31,7 +31,7 @@ function AdminExerciseIcon(props:AdminExerciseIconProps) {
 
         // axios request to update exercise
         try {
-            const res = await axios.put('http://localhost:8080/exercises', 
+            const res = await axios.put('http://ec2-54-221-99-230.compute-1.amazonaws.com/exercises', 
             updatedExercise, { headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}});
             console.log(res.data);
             await props.refreshExercises();
@@ -61,7 +61,7 @@ function AdminExerciseIcon(props:AdminExerciseIconProps) {
 
     let deleteExercise = async () => {
         try {
-            const res = await axios.delete(`http://localhost:8080/exercises/${props.exercise.exerciseId}`, 
+            const res = await axios.delete(`http://ec2-54-221-99-230.compute-1.amazonaws.com/exercises/${props.exercise.exerciseId}`, 
             { headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')} });
             console.log(res.data);
             await props.refreshExercises();

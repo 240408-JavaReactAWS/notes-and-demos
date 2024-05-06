@@ -14,7 +14,8 @@ function AllPlansPage() {
   // Set workout plans to state after rendering component with fetch request
   // Make sure to add credentials: 'include' to fetch request
   useEffect(() => {
-    axios.get('http://localhost:8080/plans', { withCredentials: true , headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}})
+    axios.get('http://ec2-54-221-99-230.compute-1.amazonaws.com/plans', 
+    { withCredentials: true , headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}})
       .then((response) => {
         setWorkoutPlans(response.data);
       })

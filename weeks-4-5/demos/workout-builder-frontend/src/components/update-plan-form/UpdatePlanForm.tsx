@@ -16,7 +16,7 @@ function UpdatePlanForm() {
 
     const getCurrentPlan = async () => {
         try {
-            const res = await axios.get(`http://localhost:8080/plans/${id}`, { 
+            const res = await axios.get(`http://ec2-54-221-99-230.compute-1.amazonaws.com/plans/${id}`, { 
                 withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
             });
             const currentPlan: IPlan = res.data;
@@ -39,7 +39,7 @@ function UpdatePlanForm() {
 
     const fetchAllExercises = async () => {
         try {
-            const res = await axios.get('http://localhost:8080/exercises', { 
+            const res = await axios.get('http://ec2-54-221-99-230.compute-1.amazonaws.com/exercises', { 
                 withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
              });
             const allExercises: IExercise[] = res.data;
@@ -93,7 +93,7 @@ function UpdatePlanForm() {
 
         // axios request to create a new plan
         try {
-            let res = await axios.put('http://localhost:8080/plans', newPlan, { 
+            let res = await axios.put('http://ec2-54-221-99-230.compute-1.amazonaws.com/plans', newPlan, { 
                 withCredentials: true, headers: { 'Content-Type': 'application/json', 'username': localStorage.getItem('username')}
              });
             if (res.status === 200) {

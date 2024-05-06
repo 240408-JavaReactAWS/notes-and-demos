@@ -24,7 +24,7 @@ function Register() {
   // Method to handle Register with axios request
   const handleRegister = async () => {
       try {
-          let res = await axios.post('http://localhost:8080/users/register', {
+          let res = await axios.post('http://ec2-54-221-99-230.compute-1.amazonaws.com/users/register', {
               username: username,
               password: password
           }, {
