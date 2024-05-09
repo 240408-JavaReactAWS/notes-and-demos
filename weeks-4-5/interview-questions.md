@@ -102,38 +102,67 @@
 
 # DevOps
 
-1.  What is DevOps? What is the goal of various DevOps processes?
+-  What is DevOps? What is the goal of various DevOps processes?
     
-2.  Explain CI/CD. What is the difference between Continuous Deployment and Continuous Delivery?
+-  Explain CI/CD. What is the difference between Continuous Deployment and Continuous Delivery?
     
-3.  What tools have you used to achieve CI/CD? Explain how you’ve setup and used them
+-  What tools have you used to achieve CI/CD? Explain how you’ve setup and used them
     
-4.  What is a DevOps pipeline? Explain the steps to setting one up
+-  What is a DevOps pipeline? Explain the steps to setting one up
+
+-  What is a Jenkinsfile?
+
+-  What is a Jenkins Job? How is it different that a Jenkins Pipeline?
+
+-  How to set up a Jenkins CI/CD Pipeline?
+
+-  What is a “build”? What is the end result of a build? What is the build tool you’ve used for Java projects?
+
+-  How can you check what caused a build to fail?
+
+-  What is SonarQube / SonarCloud? Explain some of the features of it
     
-5.  What is SonarQube / SonarCloud? Explain some of the features of it
-    
-6.  What is a “build”? What is the end result of a build? What is the build tool you’ve used for Java projects?
+
 
 ### SDLC
 
-7.  What are the steps in the software development lifecycle?
+-  What are the steps in the software development lifecycle?
     
-8.  What is the difference between Waterfall and Agile methodologies? Explain the benefits and drawbacks of each
+-  What is the difference between Waterfall and Agile methodologies? Explain the benefits and drawbacks of each
     
-9.  List some of the principles declared in the Agile manifesto
+-  List some of the principles declared in the Agile manifesto
     
-10.  What specific Agile frameworks exist? What are the main features of each?
+-  What specific Agile frameworks exist? What are the main features of each?
     
-11.  What is the Scrum process? Explain each of the Scrum ceremonies
+-  What is the Scrum process? Explain each of the Scrum ceremonies
     
-12.  How long is a typical sprint?
+-  How long is a typical sprint?
     
-13.  What is a “standup” and what should you report about your work?
+-  What is a “standup” and what should you report about your work?
     
-14.  What is the role of a “Scrum master” in a project? What about the “Product owner”?
+-  What is the role of a “Scrum master” in a project? What about the “Product owner”?
     
-15.  Explain the following metrics/charts: sprint velocity, burndown chart
+-  Explain the following metrics/charts: sprint velocity, burndown chart
     
-16.  What is a Scrum board? Have you used any software tools for your team’s Scrum board?
+-  What is a Scrum board? Have you used any software tools for your team’s Scrum board?
 
-17.  Name some technologies teams can use to keep track of progress on different projects, tasks, and due dates.
+-  Name some technologies teams can use to keep track of progress on different projects, tasks, and due dates.
+
+# Event Driven Architecture
+
+- What is Event Driven Architecture? What are Events?
+
+- What are some use cases for using Event Driven Architecture?
+
+- What is an Event Stream in Kafka?
+
+- What is the use of Kafka?
+
+- What is the role of a Kafka Broker?
+
+- What is a topic in kafka?
+
+- What is a Kafka Producer? Consumer?
+
+- How have you used Kafka?
+
